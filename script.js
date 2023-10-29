@@ -94,8 +94,8 @@ musicaFocoInput.addEventListener('change', () => {
 const contagemRegressiva = () => {
     if (tempoDecorridoEmSegundos <= 0) {
         zerar()
-        const contexto = html.getAttribute('data-contexto')
-        if (contexto === 'foco') {            
+        const focoAtivo = html.getAttribute('data-contexto') === 'foco'
+        if (focoAtivo) {            
             var event = new CustomEvent("TarefaFinalizada", {
                 detail: {
                     message: "A tarefa foi concluída com sucesso!",
@@ -107,32 +107,7 @@ const contagemRegressiva = () => {
             document.dispatchEvent(event);
             tempoDecorridoEmSegundos = 25
             mostrarTempo()
-        } else if (contexto === 'short-break') {            
-            var event = new CustomEvent("TarefaFinalizada", {
-                detail: {
-                    message: "A tarefa foi concluída com sucesso!",
-                    time: new Date(),
-                },
-                bubbles: true,
-                cancelable: true
-            });
-            document.dispatchEvent(event);
-            tempoDecorridoEmSegundos = 5
-            mostrarTempo()
-        } else {
-            var event = new CustomEvent("TarefaFinalizada", {
-                detail: {
-                    message: "A tarefa foi concluída com sucesso!",
-                    time: new Date(),
-                },
-                bubbles: true,
-                cancelable: true
-            });
-            document.dispatchEvent(event);
-            tempoDecorridoEmSegundos = 15
-            mostrarTempo()
         }
-
         return
     }
     tempoDecorridoEmSegundos -= 1
