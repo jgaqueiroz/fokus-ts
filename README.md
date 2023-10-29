@@ -4,3 +4,8 @@
 
  Aplicação de técnica de Pomodoro, desenvolvida com HTML, CSS, TypeScript e JavaScript.
  Projeto final do curso **TypeScript: o paradigma funcional no front-end** (professor [Vinicios Neves](https://www.linkedin.com/in/vinny-neves/), plataforma [Alura](https://alura.com.br/)).
+ 
+Pomodoro technique application, developed with HTML, CSS, TypeScript and JavaScript.
+Final project from course  **TypeScript: o paradigma funcional no front-end** (professor [Vinicios Neves](https://www.linkedin.com/in/vinny-neves/), [Alura](https://alura.com.br/) platform).
+ 
+ Demo: [view demo](https://jgaqueiroz.github.io/fokus-ts/)
